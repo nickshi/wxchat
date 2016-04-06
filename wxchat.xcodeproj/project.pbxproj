@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2D7AC4181B1061A13276991A /* Pods_wxchat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24E7B18A801354D37BFD9BE2 /* Pods_wxchat.framework */; };
+		7DA5BE911CB59CB700423DFC /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA5BE8F1CB59CB700423DFC /* Helper.swift */; };
 		7DFD951A1CB59A8C0032F3C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DFD95191CB59A8C0032F3C6 /* AppDelegate.swift */; };
 		7DFD95211CB59A8C0032F3C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DFD951F1CB59A8C0032F3C6 /* Main.storyboard */; };
 		7DFD95231CB59A8C0032F3C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DFD95221CB59A8C0032F3C6 /* Assets.xcassets */; };
@@ -37,6 +38,7 @@
 /* Begin PBXFileReference section */
 		24E7B18A801354D37BFD9BE2 /* Pods_wxchat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_wxchat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		614D9060AC0ABB884DD8594A /* Pods-wxchat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wxchat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-wxchat/Pods-wxchat.debug.xcconfig"; sourceTree = "<group>"; };
+		7DA5BE8F1CB59CB700423DFC /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		7DFD95161CB59A8C0032F3C6 /* wxchat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wxchat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DFD95191CB59A8C0032F3C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7DFD95201CB59A8C0032F3C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -88,6 +90,35 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		7DA5BE8C1CB59CB700423DFC /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		7DA5BE8D1CB59CB700423DFC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		7DA5BE8E1CB59CB700423DFC /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				7DA5BE8F1CB59CB700423DFC /* Helper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		7DA5BE901CB59CB700423DFC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		7DFD950D1CB59A8C0032F3C6 = {
 			isa = PBXGroup;
 			children = (
@@ -113,10 +144,10 @@
 		7DFD95181CB59A8C0032F3C6 /* wxchat */ = {
 			isa = PBXGroup;
 			children = (
-				7DFD954C1CB59B670032F3C6 /* Controllers */,
-				7DFD954D1CB59B670032F3C6 /* Extensions */,
-				7DFD954E1CB59B670032F3C6 /* Models */,
-				7DFD954F1CB59B670032F3C6 /* Views */,
+				7DA5BE8C1CB59CB700423DFC /* Controllers */,
+				7DA5BE8D1CB59CB700423DFC /* Extensions */,
+				7DA5BE8E1CB59CB700423DFC /* Helpers */,
+				7DA5BE901CB59CB700423DFC /* Models */,
 				7DFD95491CB59B1A0032F3C6 /* Helpers */,
 				7DFD95191CB59A8C0032F3C6 /* AppDelegate.swift */,
 				7DFD951F1CB59A8C0032F3C6 /* Main.storyboard */,
@@ -151,34 +182,6 @@
 				7DFD954A1CB59B340032F3C6 /* Helper.swift */,
 			);
 			path = Helpers;
-			sourceTree = "<group>";
-		};
-		7DFD954C1CB59B670032F3C6 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		7DFD954D1CB59B670032F3C6 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
-		7DFD954E1CB59B670032F3C6 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		7DFD954F1CB59B670032F3C6 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		BA6ADAF5ACA353E12C35B2F5 /* Frameworks */ = {
@@ -373,6 +376,7 @@
 			files = (
 				7DFD951A1CB59A8C0032F3C6 /* AppDelegate.swift in Sources */,
 				7DFD954B1CB59B340032F3C6 /* Helper.swift in Sources */,
+				7DA5BE911CB59CB700423DFC /* Helper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
