@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15A2301" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="yl2-sM-qoP">
+            <objects>
+                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="3DK-8v-TcO"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
+                        <rect key="frame" x="0.0" y="975" width="768" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="6gb-VV-6jt" kind="relationship" relationship="viewControllers" id="Bzh-OR-aEo"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="174" y="-185"/>
+        </scene>
+        <!--WebChat-->
+        <scene sceneID="7r4-rU-u9K">
+            <objects>
+                <tableViewController id="fSL-cO-J1W" customClass="ChatTableController" customModule="wxchat" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="2Le-F2-eJt">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="TQF-c6-Joi">
+                            <rect key="frame" x="0.0" y="64" width="600" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="fSL-cO-J1W" id="q6f-85-JwP"/>
+                            </connections>
+                        </searchBar>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="ZfV-L4-HB5">
+                                <rect key="frame" x="0.0" y="136" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZfV-L4-HB5" id="pfU-sG-Q59">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="fSL-cO-J1W" id="T33-fp-cDu"/>
+                            <outlet property="delegate" destination="fSL-cO-J1W" id="Seu-Mv-5gV"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Chats" id="e5h-hT-b2b"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="WebChat" id="fXo-8X-ahe">
+                        <barButtonItem key="rightBarButtonItem" title="+" id="aWe-zc-j5A"/>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="bAp-S6-f6N" id="cRU-tM-Xnq"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v4e-5F-FeZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="bAp-S6-f6N">
+                    <connections>
+                        <outlet property="delegate" destination="fSL-cO-J1W" id="egc-KM-d8x"/>
+                        <outlet property="searchBar" destination="TQF-c6-Joi" id="3nR-9I-QU9"/>
+                        <outlet property="searchContentsController" destination="fSL-cO-J1W" id="czd-Xu-n3L"/>
+                        <outlet property="searchResultsDataSource" destination="fSL-cO-J1W" id="W8J-y8-pGF"/>
+                        <outlet property="searchResultsDelegate" destination="fSL-cO-J1W" id="aey-Lj-RTM"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="870" y="-297"/>
+        </scene>
+        <!--Chats-->
+        <scene sceneID="WzT-Un-R9U">
+            <objects>
+                <navigationController id="6gb-VV-6jt" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Chats" id="g0W-vY-N9d"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="j6G-Rg-I8O">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="fSL-cO-J1W" kind="relationship" relationship="rootViewController" id="Bre-8D-0CE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0MA-NC-ugT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

@@ -9,13 +9,13 @@
 /* Begin PBXBuildFile section */
 		2D7AC4181B1061A13276991A /* Pods_wxchat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24E7B18A801354D37BFD9BE2 /* Pods_wxchat.framework */; };
 		7DA5BE911CB59CB700423DFC /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA5BE8F1CB59CB700423DFC /* Helper.swift */; };
+		7DA5BE931CB59D0900423DFC /* ChatTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA5BE921CB59D0900423DFC /* ChatTableController.swift */; };
 		7DFD951A1CB59A8C0032F3C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DFD95191CB59A8C0032F3C6 /* AppDelegate.swift */; };
 		7DFD95211CB59A8C0032F3C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DFD951F1CB59A8C0032F3C6 /* Main.storyboard */; };
 		7DFD95231CB59A8C0032F3C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DFD95221CB59A8C0032F3C6 /* Assets.xcassets */; };
 		7DFD95261CB59A8C0032F3C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DFD95241CB59A8C0032F3C6 /* LaunchScreen.storyboard */; };
 		7DFD95311CB59A8C0032F3C6 /* wxchatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DFD95301CB59A8C0032F3C6 /* wxchatTests.swift */; };
 		7DFD953C1CB59A8C0032F3C6 /* wxchatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DFD953B1CB59A8C0032F3C6 /* wxchatUITests.swift */; };
-		7DFD954B1CB59B340032F3C6 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DFD954A1CB59B340032F3C6 /* Helper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +39,7 @@
 		24E7B18A801354D37BFD9BE2 /* Pods_wxchat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_wxchat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		614D9060AC0ABB884DD8594A /* Pods-wxchat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wxchat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-wxchat/Pods-wxchat.debug.xcconfig"; sourceTree = "<group>"; };
 		7DA5BE8F1CB59CB700423DFC /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		7DA5BE921CB59D0900423DFC /* ChatTableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatTableController.swift; sourceTree = "<group>"; };
 		7DFD95161CB59A8C0032F3C6 /* wxchat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wxchat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DFD95191CB59A8C0032F3C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7DFD95201CB59A8C0032F3C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -51,7 +52,6 @@
 		7DFD95371CB59A8C0032F3C6 /* wxchatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = wxchatUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DFD953B1CB59A8C0032F3C6 /* wxchatUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wxchatUITests.swift; sourceTree = "<group>"; };
 		7DFD953D1CB59A8C0032F3C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7DFD954A1CB59B340032F3C6 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		87BE0C54B17018839D9BD256 /* Pods-wxchat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wxchat.release.xcconfig"; path = "Pods/Target Support Files/Pods-wxchat/Pods-wxchat.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -93,6 +93,7 @@
 		7DA5BE8C1CB59CB700423DFC /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				7DA5BE921CB59D0900423DFC /* ChatTableController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -148,7 +149,6 @@
 				7DA5BE8D1CB59CB700423DFC /* Extensions */,
 				7DA5BE8E1CB59CB700423DFC /* Helpers */,
 				7DA5BE901CB59CB700423DFC /* Models */,
-				7DFD95491CB59B1A0032F3C6 /* Helpers */,
 				7DFD95191CB59A8C0032F3C6 /* AppDelegate.swift */,
 				7DFD951F1CB59A8C0032F3C6 /* Main.storyboard */,
 				7DFD95221CB59A8C0032F3C6 /* Assets.xcassets */,
@@ -174,14 +174,6 @@
 				7DFD953D1CB59A8C0032F3C6 /* Info.plist */,
 			);
 			path = wxchatUITests;
-			sourceTree = "<group>";
-		};
-		7DFD95491CB59B1A0032F3C6 /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				7DFD954A1CB59B340032F3C6 /* Helper.swift */,
-			);
-			path = Helpers;
 			sourceTree = "<group>";
 		};
 		BA6ADAF5ACA353E12C35B2F5 /* Frameworks */ = {
@@ -374,8 +366,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DA5BE931CB59D0900423DFC /* ChatTableController.swift in Sources */,
 				7DFD951A1CB59A8C0032F3C6 /* AppDelegate.swift in Sources */,
-				7DFD954B1CB59B340032F3C6 /* Helper.swift in Sources */,
 				7DA5BE911CB59CB700423DFC /* Helper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
