@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15A2301" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="czm-km-4OH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="czm-km-4OH">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -45,7 +45,7 @@
                                 <rect key="frame" x="0.0" y="136" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZfV-L4-HB5" id="pfU-sG-Q59">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -98,7 +98,7 @@
         <!--LoginController-->
         <scene sceneID="erb-UR-uIH">
             <objects>
-                <viewController storyboardIdentifier="Login" title="LoginController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="czm-km-4OH" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Login" title="LoginController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="czm-km-4OH" customClass="LoginController" customModule="wxchat" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0XH-ha-R6v"/>
                         <viewControllerLayoutGuide type="bottom" id="yYW-WW-WwY"/>
@@ -114,15 +114,18 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Ep-z5-1nu">
-                                <rect key="frame" x="188" y="422" width="46" height="30"/>
+                                <rect key="frame" x="223" y="384" width="46" height="30"/>
                                 <state key="normal" title="Login"/>
                                 <connections>
-                                    <segue destination="49e-Tb-3d3" kind="presentation" id="sE8-Yy-I6C"/>
+                                    <action selector="btnLoginPressed:" destination="czm-km-4OH" eventType="touchUpInside" id="McC-dd-awe"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="btnLogin" destination="3Ep-z5-1nu" id="SfL-eb-oBy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Rp-8T-F5a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

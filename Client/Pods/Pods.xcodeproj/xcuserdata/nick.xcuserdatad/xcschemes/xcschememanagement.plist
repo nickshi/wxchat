@@ -8,27 +8,26 @@
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>0</integer>
 		</dict>
 		<key>Pods-wxchat.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>1</integer>
 		</dict>
 		<key>Starscream.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>2</integer>
+		</dict>
+		<key>SwiftyJSON.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>340766933EE6A4F62EB24DB222243F7F</key>
+		<key>2712C453BEF7D4981E84CDC068CF1D25</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -38,7 +37,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>EB17A6D41358B7FFF434A055F666986E</key>
+		<key>9F7BE00E732015D42B419DC088E5D21A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>ECF39FF14DCF0404553862F68E268426</key>
 		<dict>
 			<key>primary</key>
 			<true/>

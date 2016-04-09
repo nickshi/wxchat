@@ -5,8 +5,8 @@ var server = require('http').createServer()
   , express = require('express')
   , app = express()
   , port = 4080
-  , db = require('./db');
-
+  , db = require('./db')
+  , dispatcher = require('./controllers/dispatch');
 
 db.connect(db.MODE_PRODUCTION, function(err) {
 
@@ -20,12 +20,26 @@ db.connect(db.MODE_PRODUCTION, function(err) {
         var location = url.parse(ws.upgradeReq.url, true);
         // you might use location.query.access_token to authenticate or share sessions 
         // or ws.upgradeReq.headers.cookie (see http://stackoverflow.com/a/16395220/151312) 
-        console.log('new connection')
+        console.log('new connection');
+
+        dispatcher.addHandler(1, function() {
+            var json = {}
+            json.messageID = 1
+            json.code = 201
+            json.body = ""
+            json.errorMessage = "Login Error"
+
+            var strJson = JSON.stringify(json)
+            return strJson;
+        })
+
         ws.on('message', function incoming(message) {
           console.log('received: %s', message);
+
+          dispatcher.dispatch(message, ws);
         });
        
-        ws.send('something');
+        //ws.send('something');
     });
  
     server.on('request', app);
@@ -36,9 +50,9 @@ db.connect(db.MODE_PRODUCTION, function(err) {
 });
 
 
-var user = require('./models/user');
+// var user = require('./models/user');
 
-user.getAll(function(err, rows) {
-    console.log("rows ", rows)
-});
+// user.getAll(function(err, rows) {
+//     console.log("rows ", rows)
+// });
 

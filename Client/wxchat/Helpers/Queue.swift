@@ -32,13 +32,13 @@ public class Queue<T> {
         _back = _back.next!
     }
     
-    public func dequeue() ->T? {
-        if let newhead = _front.next {
-            _front = newhead
-        }
-        else
-        {
-            return nil
-        }
-    }
+//    public func dequeue() ->T? {
+//        if let newhead = _front.next {
+//            _front = newhead
+//        }
+//        else
+//        {
+//            return T()?
+//        }
+//    }
 }

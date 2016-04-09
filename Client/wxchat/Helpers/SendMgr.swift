@@ -8,9 +8,6 @@
 
 class SendMgr {
     
- 
     
-    func run(){
-        
-    }
+
 }
