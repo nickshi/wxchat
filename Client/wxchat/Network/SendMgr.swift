@@ -27,7 +27,7 @@ class SendMgr {
     
     func login(userName:String, password:String, callback:WXResponseCallBack) {
         
-        let msgID = 1
+        let msgID = MessageID.Login.rawValue
         
         var resDic = [String:AnyObject]()
         resDic["msgID"] = msgID

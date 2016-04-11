@@ -12,6 +12,7 @@
 		0180FEEF1CBB5ED800156E8D /* SendMgr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0180FEEB1CBB5ED800156E8D /* SendMgr.swift */; };
 		0180FEF01CBB5ED800156E8D /* WXWebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0180FEEC1CBB5ED800156E8D /* WXWebSocket.swift */; };
 		0180FEF11CBB5ED800156E8D /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0180FEED1CBB5ED800156E8D /* Queue.swift */; };
+		0180FEF31CBB602A00156E8D /* Messges.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0180FEF21CBB602A00156E8D /* Messges.swift */; };
 		2D7AC4181B1061A13276991A /* Pods_wxchat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24E7B18A801354D37BFD9BE2 /* Pods_wxchat.framework */; };
 		7DA5BE911CB59CB700423DFC /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA5BE8F1CB59CB700423DFC /* Helper.swift */; };
 		7DA5BE931CB59D0900423DFC /* ChatTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA5BE921CB59D0900423DFC /* ChatTableController.swift */; };
@@ -46,6 +47,7 @@
 		0180FEEB1CBB5ED800156E8D /* SendMgr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendMgr.swift; sourceTree = "<group>"; };
 		0180FEEC1CBB5ED800156E8D /* WXWebSocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WXWebSocket.swift; sourceTree = "<group>"; };
 		0180FEED1CBB5ED800156E8D /* Queue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
+		0180FEF21CBB602A00156E8D /* Messges.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Messges.swift; sourceTree = "<group>"; };
 		24E7B18A801354D37BFD9BE2 /* Pods_wxchat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_wxchat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		614D9060AC0ABB884DD8594A /* Pods-wxchat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wxchat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-wxchat/Pods-wxchat.debug.xcconfig"; sourceTree = "<group>"; };
 		7DA5BE8F1CB59CB700423DFC /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 				0180FEEB1CBB5ED800156E8D /* SendMgr.swift */,
 				0180FEEC1CBB5ED800156E8D /* WXWebSocket.swift */,
 				0180FEED1CBB5ED800156E8D /* Queue.swift */,
+				0180FEF21CBB602A00156E8D /* Messges.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -394,6 +397,7 @@
 				0180FEE61CB6AAF600156E8D /* LoginController.swift in Sources */,
 				0180FEF11CBB5ED800156E8D /* Queue.swift in Sources */,
 				7DFD951A1CB59A8C0032F3C6 /* AppDelegate.swift in Sources */,
+				0180FEF31CBB602A00156E8D /* Messges.swift in Sources */,
 				0180FEEF1CBB5ED800156E8D /* SendMgr.swift in Sources */,
 				0180FEF01CBB5ED800156E8D /* WXWebSocket.swift in Sources */,
 				7DA5BE911CB59CB700423DFC /* Helper.swift in Sources */,

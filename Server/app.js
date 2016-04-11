@@ -25,7 +25,7 @@ db.connect(db.MODE_PRODUCTION, function(err) {
         dispatcher.addHandler(1, function() {
             var json = {}
             json.messageID = 1
-            json.code = 201
+            json.code = 200
             json.body = ""
             json.errorMessage = "Login Error"
 
