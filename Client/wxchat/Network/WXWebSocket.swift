@@ -17,7 +17,7 @@ class WXResponse {
     
     var hasError:Bool {
         get {
-            return code != 200
+            return code % 100  != 0
         }
     }
     
@@ -31,11 +31,26 @@ class WXResponse {
     
 }
 
+class WXRequest {
+    
+    var messageID: Int = 0
+    var requestContent :String = ""
+    var removeHandler : Bool = true
+    var handler : WXResponseCallBack?
+    
+    init(messageID:Int, requestContent:String,handler:WXResponseCallBack, removeHandler:Bool){
+        self.messageID = messageID
+        self.requestContent = requestContent
+        self.removeHandler = removeHandler
+        self.handler = handler
+    }
+}
+
 
 var messageUniqueID = 0
 class MessageHandler {
     
-    var uniqueID:Int
+    var uniqueID:String
     var messageID:Int = 0
     var handler:WXResponseCallBack?
     
@@ -44,67 +59,9 @@ class MessageHandler {
     init(messageID:Int, handler:WXResponseCallBack, removeWhenFinished:Bool){
         self.messageID = messageID
         self.handler = handler
-        uniqueID = ++messageUniqueID
+        uniqueID = NSUUID().UUIDString
     }
 }
-
-class MessageDispatcher{
-    static let dispatcher = MessageDispatcher()
-    
-    var messageHandlerDic:[Int:[MessageHandler]]
-    
-    init()
-    {
-        messageHandlerDic = [Int:[MessageHandler]]()
-    }
-    
-    
-    func registerMessageHandler(messageID:Int, handler:WXResponseCallBack, removeWhenFinished:Bool){
-        
-        let msgHandler = MessageHandler(messageID: messageID, handler: handler, removeWhenFinished: removeWhenFinished)
-        
-        let handlers = messageHandlerDic[messageID]
-        
-        if handlers == nil {
-            messageHandlerDic[messageID] = [MessageHandler]()
-        }
-        messageHandlerDic[messageID]?.append(msgHandler)
-        
-    }
-    
-    func unRegisterMessageHandler(handler:MessageHandler) {
-        let handlers = messageHandlerDic[handler.messageID]
-        
-        if handlers != nil {
-           let index = messageHandlerDic[handler.messageID]?.indexOf({ (mHandler) -> Bool in
-                return mHandler.uniqueID == handler.uniqueID;
-            })
-            
-            if let iIndex = index {
-                messageHandlerDic[handler.messageID]?.removeAtIndex(iIndex)
-            }
-        }
-
-    }
-    
-    func dispatchMessage(responseData:WXResponse){
-        let handlers = messageHandlerDic[responseData.messageID]
-        
-        handlers?.forEach({ (msgHandler) in
-            msgHandler.handler!(responseData)
-            if msgHandler.removedWhenFinished { self.unRegisterMessageHandler(msgHandler) }
-        })
-    }
-    
-
-    
-    
-
-   
-}
-
-
-typealias WXResponseCallBack = (WXResponse) ->Void
 
 class WXWebSocket:WebSocketDelegate {
     
@@ -157,18 +114,9 @@ class WXWebSocket:WebSocketDelegate {
         
     }
     
-    
-    func login(userName:String, password:String, callback:WXResponseCallBack) {
-        
-        var resDic = [String:AnyObject]()
-        resDic["msgID"] = 1
-        resDic["userName"] = userName
-        resDic["password"] = password
-        
-        let strJson = Helper.dicToJsonString(resDic)
-        
-        MessageDispatcher.dispatcher.registerMessageHandler(1, handler: callback, removeWhenFinished: true)
-        socket!.writeString(strJson)
+    func sendRequest(requestData:WXRequest) {
+        MessageDispatcher.dispatcher.registerMessageHandler(requestData.messageID, handler: requestData.handler!, removeWhenFinished: true)
+        socket!.writeString(requestData.requestContent)
     }
     
 }

@@ -13,18 +13,17 @@ class LoginController: UIViewController {
     
     @IBOutlet weak var btnLogin: UIButton!
     
-    var websocket = WXWebSocket()
     
     override func viewDidLoad() {
-        super.viewDidLoad();
+        super.viewDidLoad()
         
-        websocket.connect();
+        SendMgr.mgr.connect()
         
     }
     
     
     @IBAction func btnLoginPressed(sender:UIButton) {
-        websocket.login("nick", password: "12345") { (response) in
+        SendMgr.mgr.login("nick", password: "12345") { (response) in
             if response.hasError {
                 let alert = UIAlertView(title: "Error", message: response.errorMessage, delegate: nil, cancelButtonTitle: "Cancel");
                 alert.show()
